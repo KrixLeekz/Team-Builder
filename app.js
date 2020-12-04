@@ -91,7 +91,7 @@ const lowerEmployeeQs = () => {
         if (answers.anotherEmployee === true) {
             lowerEmployeeQs()
         } else {
-            render(employees)
+            fs.writeFileSync('./templates/main.html', render(employees))
         }
     })
 }
